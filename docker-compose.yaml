@@ -1,0 +1,18 @@
+version: '2'
+services:
+  postgres:
+    image: postgres:10.4
+    ports:
+     - 5432:5432
+    environment:
+     - POSTGRES_USER=postgres
+     - POSTGRES_PASSWORD=postgres
+  memcached:
+    image: memcached:latest
+    ports:
+     - 11211:11211
+    links:
+     - postgres
+    environment:
+     - MEMCACHED_USERNAME=memcached
+     - MEMCACHED_PASSWORD=memcached

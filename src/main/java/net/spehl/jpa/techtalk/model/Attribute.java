@@ -1,5 +1,6 @@
 package net.spehl.jpa.techtalk.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,15 +11,22 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Attribute {
 
-    @Column @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     @Column
     private String name;
+
     @Column
     private String value;
+
     @Column
     private int type;
+
     @ManyToOne
+    @JsonIgnore
     private Person owner;
 
     public Attribute() {}

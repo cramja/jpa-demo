@@ -1,6 +1,5 @@
 package net.spehl.jpa.techtalk.model;
 
-import com.sun.istack.internal.NotNull;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;

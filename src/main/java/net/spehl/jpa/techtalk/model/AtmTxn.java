@@ -1,5 +1,6 @@
 package net.spehl.jpa.techtalk.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -21,6 +22,7 @@ public class AtmTxn {
     @Column
     private Double amount;
 
+    @JsonIgnore
     @ManyToOne
     private Person owner;
 

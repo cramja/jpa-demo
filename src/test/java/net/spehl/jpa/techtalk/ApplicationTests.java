@@ -2,14 +2,11 @@ package net.spehl.jpa.techtalk;
 
 import static com.google.common.math.Stats.meanOf;
 
-import com.google.common.math.Stats;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-import javax.transaction.Transactional;
 import net.spehl.jpa.techtalk.model.Person;
 import net.spehl.jpa.techtalk.repo.PersonRepository;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +15,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class TechTalkApplicationTests {
+public class ApplicationTests {
 
 	@Autowired PersonRepository repo;
 
